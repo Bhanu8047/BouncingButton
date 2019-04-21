@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: Montserrat Alternates, serif;
+    font-weight: lighter;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+h1{
+    color: rgba(1,1,1,0.8);
+    text-shadow: 1pt 1pt 5pt rgba(1,1,1,0.3);
+    padding: 24px 24px;
+}
+.wrapper{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 3px groove #6982626b;
+    height: 60px;
+    width: 160px;
+    box-shadow: 0 4px 40px rgba(1,25,15,0.4);
+    border-radius: 60px;
+    transition: all 0.5s cubic-bezier(.17,.67,.83,.67);
+    transform: translate(-50%,-50%);
+    background-color: rgba(230, 230, 230, 0.80);
+}
+.wrapper:hover{
+    box-shadow: none;
+}
+
+.button{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    /*background: #ffffffe6;*/
+    background-color: #f5f5f5;
+    text-align: center;
+    line-height: 60px;
+    font-size: 12pt;
+    color: rgba(35, 35, 35, 0.84);
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px rgba(1,1,1,0.5) , -1px 1px 2px rgba(1,1,1,0.5) ;
+    transform: scale(0.85,0.85);
+}
+.buttonOff{
+    animation: off 0.75 cubic-bezier(.17,.67,.83,.67) 1s backwards;
+}
+@keyframes off {
+    0%{
+        background-color: rgba(51, 179, 19, 0.8);
+    }
+    100%{
+        background-color: rgba(230, 230, 230, 0.80);
+    }
+}
+.buttonOn{
+    animation: on 0.75s cubic-bezier(.17,.67,.83,.67) 1s forwards;
+}
+@keyframes on {
+    0%{
+        background-color: rgba(230, 230, 230, 0.80);
+    }
+    100%{
+        background-color: rgba(51, 179, 19, 0.8);
+    }
+}
+.buttonTransOn{
+    transition: transform 0.675s cubic-bezier(0.175, 0.885, 0.32, 1.275), left 0.5s cubic-bezier(0.175, 0.7, 0.32, 1.275) 0.675s;
+    transform: scale(0.75,0.75) ;
+    left: 100px;
+    animation: boom 0.675s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.180s forwards;
+}
+@keyframes boom {
+    0%{
+        transform: scale(0.75,0.75);
+    }
+    100%{
+        transform: scale(0.9,0.9);
+    }
+}
+
+.buttonTransOff{
+    transition: transform 0.675s cubic-bezier(0.175, 0.885, 0.32, 1.275) , left 0.5s cubic-bezier(0.175, 0.7, 0.32, 1.275) 0.675s;
+    transform: scale(0.75,0.75) ;
+    left: 0;
+    animation: loom 0.675s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.180s forwards;
+}
+@keyframes loom {
+    0%{
+        transform: scale(0.75,0.75);
+    }
+    100%{
+        transform: scale(0.85,0.85);
+    }
+}
