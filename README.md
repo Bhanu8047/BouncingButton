@@ -1,3 +1,3 @@
 # BOUNCING BUTTON ANIMATION
-### Using HTML, CSS, JAVASCRIPT
-https://bhanu8047.github.io/BouncingButton/
+### A bouncing animation button Using HTML, CSS, JAVASCRIPT with smooth animation
+Link - https://bhanu8047.github.io/BouncingButton/
